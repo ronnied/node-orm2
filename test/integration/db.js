@@ -210,6 +210,8 @@ describe("db.driver", function () {
 		should.exist(db.driver);
 	});
 
+	if (common.protocol() == "mongodb") return;
+
 	describe("query", function () {
 		it("should be available", function () {
 			should.exist(db.driver.query);
